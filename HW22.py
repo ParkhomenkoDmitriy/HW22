@@ -1,17 +1,6 @@
 import time
 
 
-def load():
-    time.sleep(1)
-    print("load")
-    time.sleep(1)
-
-
-def stop():
-    print("stop")
-    time.sleep(1)
-
-
 class Auto:
     def __init__(self, brand, age, mark, color=None, weight=None):
         self.brand = brand
@@ -22,12 +11,21 @@ class Auto:
 
     def perform_actions(self):
         self.move()
-        load()
+        self.load()
         self.show_info()
-        stop()
+        self.stop()
 
     def move(self):
         print("move")
+
+    def load(self):
+        time.sleep(1)
+        print("load")
+        time.sleep(1)
+
+    def stop(self):
+        print("stop")
+        time.sleep(1)
 
     def show_info(self):
         print(f"Brand = {self.brand}, Age = {self.age}, Mark = {self.mark}, Color = {self.color}, "
@@ -54,8 +52,8 @@ class Car(Auto):
         self.max_speed = max_speed
 
     def move(self):
-        super().move()
         print(f"max speed is {self.max_speed}")
+        super().move()
 
     def show_info(self):
         print(f"Car: Brand = {self.brand}, Age = {self.age}, Mark = {self.mark}, Max Speed = {self.max_speed},"
