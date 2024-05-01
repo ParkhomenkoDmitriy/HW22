@@ -28,8 +28,10 @@ class Auto:
         time.sleep(1)
 
     def show_info(self):
-        print(f"Brand = {self.brand}, Age = {self.age}, Mark = {self.mark}, Color = {self.color}, "
-              f"Weight = {self.weight}")
+        print(
+            f"Brand = {self.brand}, Age = {self.age}, Mark = {self.mark}, "
+            f"Color = {self.color}, Weight = {self.weight}"
+        )
 
 
 class Truck(Auto):
@@ -42,8 +44,10 @@ class Truck(Auto):
         super().move()
 
     def show_info(self):
-        print(f"Truck: Brand = {self.brand}, Age = {self.age}, Max Load = {self.max_load}, Color = {self.color}, "
-              f"Weight = {self.weight}")
+        print(
+            f"Truck: Brand = {self.brand}, Age = {self.age}, Max Load = {self.max_load}, "
+            f"Color = {self.color}, Weight = {self.weight}"
+        )
 
 
 class Car(Auto):
@@ -52,19 +56,21 @@ class Car(Auto):
         self.max_speed = max_speed
 
     def move(self):
-        print(f"max speed is {self.max_speed}")
         super().move()
+        print(f"max speed is {self.max_speed}")
 
     def show_info(self):
-        print(f"Car: Brand = {self.brand}, Age = {self.age}, Mark = {self.mark}, Max Speed = {self.max_speed},"
-              f" Color = {self.color}, Weight = {self.weight}")
+        print(
+            f"Car: Brand = {self.brand}, Age = {self.age}, Mark = {self.mark}, "
+            f"Max Speed = {self.max_speed}, Color = {self.color}, Weight = {self.weight}"
+        )
 
 
-truck1 = Truck("Volvo", 5, "FH16", 40000, color="Blue", weight=12000)
-truck2 = Truck("Scania", 3, "R450", 45000, color="White", weight=12500)
+truck1 = Truck("Volvo", 5, "FH16", 40000, color="Blue", weight=12000)  # Truck 1
+truck2 = Truck("Scania", 3, "R450", 45000, color="White", weight=12500)  # Truck 2
 
-car1 = Car("BMW", 2, "320i", 250, color="Black", weight=1400)
-car2 = Car("Audi", 1, "A4", 240, color="Silver", weight=1450)
+car1 = Car("BMW", 2, "320i", 250, color="Black", weight=1400)  # Car 1
+car2 = Car("Audi", 1, "A4", 240, color="Silver", weight=1450)  # Car 2
 
 truck1.perform_actions()
 truck2.perform_actions()
